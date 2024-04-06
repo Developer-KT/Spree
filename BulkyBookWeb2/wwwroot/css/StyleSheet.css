@@ -1,0 +1,178 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --steps: 16;
+    --background: #fafafa;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+#logo {
+    display: flex;
+    align-content: center;
+}
+
+#home-header {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1rem;
+    border-bottom: 1px white solid;
+    margin-bottom: 0 !important;
+    margin-top: 1rem;
+}
+
+.nav-tabs li a {
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-tabs li a:hover {
+    color: #FA8D0C;
+    cursor: pointer;
+}
+
+.button-div {
+    display: flex;
+    align-items: center;
+}
+
+#sign-up-btn {
+    padding: 0.4rem 1rem;
+    background-color: #FA8D0C;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+/* ---------------- Hero Section ------------------------- */
+
+.content-container {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4.5rem;
+    width: 100%;
+    padding: 3rem 5rem;
+    background-color: #fafafa;
+}
+
+#hero-heading {
+    font-family: poppins;
+    font-weight: bold;
+    min-width: 50%
+}
+
+#hero-heading span {
+    color: #FA8D0C;
+}
+
+#hero-image {
+    width: 85%;
+    height: 93%;
+}
+
+.hero-section aside {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+/* ------------------- Body section ---------------------*/
+
+.body-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 5rem;
+}
+
+.body-section h2 {
+    font-weight: bold;
+}
+
+.body-section h2 span {
+    color: #FA8D0C;
+}
+
+.body-section img {
+    width: 100%;
+}
+
+/* ------------------------ Animations ------------------------- */
+
+.typing {
+    position: relative;
+}
+
+.typing::after {
+    content: "|";
+    position: absolute;
+    right: 27%;
+    width: 75%;
+    color: black;
+    background: var(--background);
+    animation: typing 2s steps(var(--steps)) forwards, caret 0.5s infinite;
+}
+
+@keyframes typing {
+    to {
+    width: 0
+}
+
+}
+
+@keyframes caret {
+    50% {
+        color: transparent
+    }
+}
+
+/* ------------------------------- Shopping Page -------------------------------------*/
+
+.p-3 {
+    padding-top: 5rem !important;
+}
+
+.table th, .table td {
+    color: white;
+}
+
+.btn-danger {
+    background-color: red;
+    border: red;
+}
+
+footer {
+    position: unset !important;
+}
+
+.go-to-track {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}

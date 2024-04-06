@@ -1,0 +1,37 @@
+﻿@model Category
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Add New Item</h2>
+            <hr/>
+        </div>
+        @* <div asp-validation-summary="All"></div> *@
+        <div class="mb-3">
+            <label asp-for="Name">Item Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DisplayOrder">Quantity</label>
+            <input asp-for="DisplayOrder" class="form-control" />
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+@* The label text is automatically the name of the property specified in the asp-for tag helper *@
+
+@* asp-validation-for checks the requirements of the mentioned field (e.g: Name) then displays the corresponding error *@
+@* Line 20: in a Form of method="post", the button type="submit" submits whatever data is entered and posts it
+    to the server. In our case: this form data goes to the controller of this view (CategoryController) and there it
+    looks for the post field????
+*@

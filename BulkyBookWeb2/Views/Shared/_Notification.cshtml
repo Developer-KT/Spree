@@ -1,0 +1,23 @@
+﻿@if(TempData["success"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@TempData["success"]')
+    </script>
+}
+
+@if (TempData["error"] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.error('@TempData["error"]')
+    </script>
+}
+
+@* Line 1: we're aiming to display the alert (as an h2). If the TempData is not null then we display it *@
+@* We have moved these conditions to a partial view which we'll then call in the intended files (we do this
+   for reusability - so that we can just call the partial view when we need to display the success or error
+   text)
+*@
